@@ -26,18 +26,73 @@ NOR gate is actually a combination of two logic gates: OR gate followed by NOT g
 
 F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 
-## Logic Diagram
+
 ## Procedure
+
+1.Create a project with required entities. 
+2.Create a module along with respective file name.
+3.Run the respective programs for the given boolean equations. 
+4.Run the module and get the respective RTL outputs.
+5.Create university program(VWF) for getting timing diagram. 
+6.Give the respective inputs for timing diagram and obtain the results
+
 ## Program:
 /*
 Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: GURUMOORTHI R
+RegisterNumber:  212222230042
 */
-## RTL realization
+
+```
+module IMPLE(a,b,c,d,w,x,y,z,F1,F2);
+input a,b,c,d,w,x,y,z;
+output F1,F2;
+wire  A1,A2,A3,A4,A5,B1,B2,B3,B4,B5;
+assign A1= (~a&(~b)&(~c)&(~d));
+assign A2= (a&c&(~d));
+assign A3= ((~b)&c&(~d));
+assign A4= (~a&b&c&d);
+assign A5= (b&(~c)&d);
+assign F1= A1|A2|A3|A4|A5;
+assign B1= (x&(~y)&z);
+assign B2= (~x&(~y)&z);
+assign B3= (~w&x&y);
+assign B4= (w&(~x)&y);
+assign B5= (w&y&z);
+assign F2= B1|B2|B3|B4|B5;
+endmodule		 
+```
+
+
+
+
+
+
 
 ## Output:
+
 ## RTL
+
+![image](https://user-images.githubusercontent.com/118707009/234773705-0a3d410b-7a17-4de1-8600-40b84de31a8f.png)
+
+
+
+
+
+
+
+
+
 ## Timing Diagram
+
+![image](https://user-images.githubusercontent.com/118707009/234773764-9282c143-0cee-4906-bec2-39b7c22f4b98.png)
+
+## TRUTH TABLE
+
+
+
+
+
+
 ## Result:
 Thus the given logic functions are implemented using NAND and NOR gates and their operations are verified using Verilog programming.
