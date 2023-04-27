@@ -89,6 +89,7 @@ endmodule
 
 ## TRUTH TABLE
 
+![trv1](https://user-images.githubusercontent.com/118707009/234776064-5d25b16a-8060-4f95-82e0-881f972bfc3c.jpg)
 
 
 
